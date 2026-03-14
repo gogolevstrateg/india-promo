@@ -14,23 +14,25 @@
       t.src=v;s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '568771722817344'); // ВСТАВЬ СВОЙ ID
+      fbq('init', '568771722817344'); 
       fbq('track', 'PageView');
     </script>
+
     <style>
         * { box-sizing: border-box; }
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: #0b0214 url('https://w.wallha.com/ws/13/v67IuYvK.jpg') no-repeat center center fixed; /* ЗАМЕНИ НА СВОЙ ФОН */
-            background-size: cover;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    /* ВОТ ТУТ МЕНЯЕМ ССЫЛКУ НА ТВОЙ ФАЙЛ */
+    background: #0b0214 url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
 
         .wrapper {
             width: 100%;
@@ -39,31 +41,25 @@
             text-align: center;
         }
 
-        .logo {
-            width: 180px;
-            margin-bottom: 20px;
-        }
+        a { text-decoration: none; color: inherit; display: block; }
 
+        .logo { width: 160px; margin-bottom: 15px; border: none; }
+        
         .main-banner {
             width: 100%;
-            max-width: 300px;
-            border-radius: 10px;
+            max-width: 280px;
+            border-radius: 15px;
             margin-bottom: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-        }
-
-        .instruction {
-            font-size: 16px;
-            margin-bottom: 20px;
-            font-weight: 500;
+            border: none;
         }
 
         .glass-box {
-            background: rgba(139, 0, 0, 0.25); /* Полупрозрачный красный как на скрине */
+            background: rgba(139, 0, 0, 0.25);
             backdrop-filter: blur(10px);
-            padding: 30px 20px;
-            border-radius: 5px;
+            padding: 25px 20px;
+            border-radius: 15px;
             border: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 30px;
         }
 
         .btn {
@@ -71,34 +67,18 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            padding: 15px;
-            margin-bottom: 15px;
+            padding: 16px;
+            margin-bottom: 12px;
             border-radius: 12px;
-            text-decoration: none;
             font-weight: bold;
             font-size: 16px;
             color: white;
-            transition: 0.3s;
             border: none;
             cursor: pointer;
         }
 
-        /* Кнопка промокода */
-        .btn-promo {
-            background: #3c26ff;
-            box-shadow: 0 4px 15px rgba(60, 38, 255, 0.4);
-        }
-
-        /* Кнопка игры */
-        .btn-play {
-            background: #3c26ff;
-            box-shadow: 0 4px 15px rgba(60, 38, 255, 0.4);
-            animation: pulse 2s infinite;
-        }
-
-        .btn:last-child { margin-bottom: 0; }
-
-        .btn span { margin: 0 10px; }
+        .btn-promo { background: #3c26ff; box-shadow: 0 4px 15px rgba(60, 38, 255, 0.4); }
+        .btn-play { background: #3c26ff; animation: pulse 2s infinite; }
 
         @keyframes pulse {
             0% { transform: scale(1); }
@@ -106,42 +86,72 @@
             100% { transform: scale(1); }
         }
 
-        .icon { width: 20px; height: 20px; }
+        .instr-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .finger-down {
+            font-size: 50px;
+            margin: 10px 0;
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(15px); }
+        }
+
+        .instruction-image {
+            width: 100%;
+            border-radius: 15px;
+            border: 2px solid #3c26ff;
+            margin-top: 10px;
+            box-shadow: 0 0 20px rgba(60, 38, 255, 0.5);
+        }
     </style>
 </head>
 <body>
 
     <div class="wrapper">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Aviator_logo.svg/1200px-Aviator_logo.svg.png" class="logo" alt="Aviator">
-
-        <img src="https://aviamaster.carrd.co/assets/images/gallery01/790da244.jpg?v=141d4f5f" class="main-banner" alt="Promo">
-
-        <p class="instruction">⭐ Click the promo code (SEXYWIN) and receive a bonus.</p>
+        <a href="https://lkhp.cc/715a0c" class="pixel-link">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Aviator_logo.svg/1200px-Aviator_logo.svg.png" class="logo">
+        </a>
 
         <div class="glass-box">
-            <button class="btn btn-promo" onclick="copyPromo()">
+            <a href="https://lkhp.cc/715a0c" class="btn btn-promo pixel-link">
                 <span>⭐⭐ SEXYWIN ✈️✈️✈️</span>
                 <span style="margin-left: auto;">🔑</span>
-            </button>
+            </a>
 
-            <a href="https://lkhp.cc/715a0c" class="btn btn-play" id="playBtn">
-                <span>PLAY AND GET 550% BONUS + 70 FS</span>
+            <a href="https://lkhp.cc/715a0c" class="btn btn-play pixel-link">
+                <span>PLAY AND GET 550% BONUS</span>
                 <span style="margin-left: auto;">🎮</span>
             </a>
         </div>
+
+        <div class="instr-title">How to play?</div>
+        <div class="finger-down">👇</div>
+        
+        <a href="https://lkhp.cc/715a0c" class="pixel-link">
+            <img src="guide.png" class="instruction-image" alt="Instructions">
+        </a>
+        
+        <p style="margin-top: 20px; font-size: 14px; opacity: 0.8;">
+            Follow these 4 simple steps to start winning!
+        </p>
     </div>
 
     <script>
-        // Функция копирования промокода
-        function copyPromo() {
-            navigator.clipboard.writeText("SEXYWIN");
-            alert("Promo code SEXYWIN copied!");
-            fbq('track', 'Other'); // Опционально: трекаем клик по промокоду
-        }
-
-        // Трекинг кнопки ИГРАТЬ
-        document.getElementById('playBtn').addEventListener('click', function() {
-            fbq('track', 'Lead');
+        // Скрипт вешает событие Lead на ВСЕ элементы с классом pixel-link
+        var links = document.querySelectorAll('.pixel-link');
+        links.forEach(function(link) {
+            link.addEventListener('click', function() {
+                fbq('track', 'Lead');
+            });
         });
     </script>
 
