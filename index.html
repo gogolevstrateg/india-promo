@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Aviator & Win</title>
+    <title>Aviator - Catch Your Luck</title>
     
     <script>
       !function(f,b,e,v,n,t,s)
@@ -14,30 +14,134 @@
       t.src=v;s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '568771722817344'); // ЗАМЕНИ НА СВОИ ЦИФРЫ
+      fbq('init', '568771722817344'); // ВСТАВЬ СВОЙ ID
       fbq('track', 'PageView');
     </script>
     <style>
-        body { font-family: Arial, sans-serif; background: #1a1a1a; color: white; text-align: center; margin: 0; padding: 20px; }
-        .container { max-width: 400px; margin: auto; }
-        .btn { display: block; background: #ff0000; color: white; padding: 20px; text-decoration: none; font-weight: bold; border-radius: 10px; font-size: 20px; margin-top: 30px; animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #0b0214 url('https://w.wallha.com/ws/13/v67IuYvK.jpg') no-repeat center center fixed; /* ЗАМЕНИ НА СВОЙ ФОН */
+            background-size: cover;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 180px;
+            margin-bottom: 20px;
+        }
+
+        .main-banner {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .instruction {
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .glass-box {
+            background: rgba(139, 0, 0, 0.25); /* Полупрозрачный красный как на скрине */
+            backdrop-filter: blur(10px);
+            padding: 30px 20px;
+            border-radius: 5px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            color: white;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Кнопка промокода */
+        .btn-promo {
+            background: #3c26ff;
+            box-shadow: 0 4px 15px rgba(60, 38, 255, 0.4);
+        }
+
+        /* Кнопка игры */
+        .btn-play {
+            background: #3c26ff;
+            box-shadow: 0 4px 15px rgba(60, 38, 255, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        .btn:last-child { margin-bottom: 0; }
+
+        .btn span { margin: 0 10px; }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        .icon { width: 20px; height: 20px; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <img src="https://via.placeholder.com/300x150?text=AVIATOR+LOGO" alt="Aviator" style="width:100%">
-        <h1>Win up to ₹50,000 Today!</h1>
-        <p>Instant UPI Withdrawals • 500% Bonus</p>
-        
-        <a href="https://lkhp.cc/715a0c" class="btn" id="playButton">PLAY & WIN NOW</a>
+    <div class="wrapper">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Aviator_logo.svg/1200px-Aviator_logo.svg.png" class="logo" alt="Aviator">
+
+        <img src="https://aviamaster.carrd.co/assets/images/gallery01/790da244.jpg?v=141d4f5f" class="main-banner" alt="Promo">
+
+        <p class="instruction">⭐ Click the promo code (SEXYWIN) and receive a bonus.</p>
+
+        <div class="glass-box">
+            <button class="btn btn-promo" onclick="copyPromo()">
+                <span>⭐⭐ SEXYWIN ✈️✈️✈️</span>
+                <span style="margin-left: auto;">🔑</span>
+            </button>
+
+            <a href="ТВОЯ_ССЫЛКА_1WIN" class="btn btn-play" id="playBtn">
+                <span>PLAY AND GET 550% BONUS + 70 FS</span>
+                <span style="margin-left: auto;">🎮</span>
+            </a>
+        </div>
     </div>
 
     <script>
-        // СКРИПТ ОТСЛЕЖИВАНИЯ КЛИКА
-        document.getElementById('playButton').addEventListener('click', function() {
-            fbq('track', 'Lead'); // Это отправит событие "Лид" в Фейсбук
+        // Функция копирования промокода
+        function copyPromo() {
+            navigator.clipboard.writeText("SEXYWIN");
+            alert("Promo code SEXYWIN copied!");
+            fbq('track', 'Other'); // Опционально: трекаем клик по промокоду
+        }
+
+        // Трекинг кнопки ИГРАТЬ
+        document.getElementById('playBtn').addEventListener('click', function() {
+            fbq('track', 'Lead');
         });
     </script>
 
