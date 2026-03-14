@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Aviator & Win</title>
+    
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '568771722817344'); // ЗАМЕНИ НА СВОИ ЦИФРЫ
+      fbq('track', 'PageView');
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; background: #1a1a1a; color: white; text-align: center; margin: 0; padding: 20px; }
+        .container { max-width: 400px; margin: auto; }
+        .btn { display: block; background: #ff0000; color: white; padding: 20px; text-decoration: none; font-weight: bold; border-radius: 10px; font-size: 20px; margin-top: 30px; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://via.placeholder.com/300x150?text=AVIATOR+LOGO" alt="Aviator" style="width:100%">
+        <h1>Win up to ₹50,000 Today!</h1>
+        <p>Instant UPI Withdrawals • 500% Bonus</p>
+        
+        <a href="https://lkhp.cc/715a0c" class="btn" id="playButton">PLAY & WIN NOW</a>
+    </div>
+
+    <script>
+        // СКРИПТ ОТСЛЕЖИВАНИЯ КЛИКА
+        document.getElementById('playButton').addEventListener('click', function() {
+            fbq('track', 'Lead'); // Это отправит событие "Лид" в Фейсбук
+        });
+    </script>
+
+</body>
+</html>
