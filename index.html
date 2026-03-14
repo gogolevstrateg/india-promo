@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aviator 1Win - India</title>
+    <title>Aviator 1Win - Official Promo</title>
     
     <script>
       !function(f,b,e,v,n,t,s)
@@ -14,86 +14,154 @@
       t.src=v;s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '568771722817344'); 
+      fbq('init', '568771722817344'); // <-- ВСТАВЬ СВОИ ЦИФРЫ ТУТ
       fbq('track', 'PageView');
     </script>
-
     <style>
         * { box-sizing: border-box; }
+        
         body {
-            margin: 0; padding: 0;
-            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            /* Фон берется из файла bg.jpg в твоем репозитории */
             background: #0b0214 url('bg.jpg') no-repeat center center fixed;
             background-size: cover;
             color: white;
-            display: flex; flex-direction: column; align-items: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
-        .wrapper { width: 100%; max-width: 450px; padding: 20px; text-align: center; }
-        
-        /* Чтобы всё было кликабельно */
-        a { text-decoration: none; color: inherit; display: block; border: none; outline: none; }
+        .wrapper {
+            width: 100%;
+            max-width: 450px;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-        .logo { width: 200px; margin-top: 10px; margin-bottom: 20px; }
-        
+        /* Общие настройки для всех ссылок-картинок */
+        a.pixel-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            border: none;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
         .main-banner {
-            width: 100%; max-width: 250px; 
-            border-radius: 15px; margin-bottom: 15px;
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            width: 100%;
+            max-width: 260px;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .promo-text { font-size: 16px; margin-bottom: 20px; font-weight: 500; }
+        .promo-text {
+            font-size: 16px;
+            margin: 10px 0 20px 0;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
 
+        /* Стеклянная панель для кнопок */
         .glass-box {
             background: rgba(139, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            padding: 25px 20px; border-radius: 20px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 25px 20px;
+            border-radius: 25px;
             border: 1px solid rgba(255,255,255,0.1);
+            width: 100%;
             margin-bottom: 40px;
         }
 
         .btn {
-            display: flex; align-items: center; justify-content: center;
-            width: 100%; padding: 18px; margin-bottom: 15px;
-            border-radius: 15px; font-weight: bold; font-size: 16px;
-            color: white; border: none; cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 18px;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 17px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
         }
 
-        .btn-promo { background: #3c26ff; box-shadow: 0 4px 15px rgba(60, 38, 255, 0.4); }
-        .btn-play { background: #3c26ff; animation: pulse 2s infinite; }
+        .btn:active { transform: scale(0.98); }
+
+        .btn-promo {
+            background: #3c26ff;
+            box-shadow: 0 4px 20px rgba(60, 38, 255, 0.5);
+        }
+
+        .btn-play {
+            background: #3c26ff;
+            box-shadow: 0 4px 20px rgba(60, 38, 255, 0.5);
+            animation: pulse 2s infinite;
+            margin-bottom: 0;
+        }
 
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+            50% { transform: scale(1.04); }
             100% { transform: scale(1); }
         }
 
-        .instr-title { font-size: 26px; font-weight: 900; text-transform: uppercase; }
-        .finger-down { font-size: 50px; margin: 5px 0; animation: bounce 1.5s infinite; }
-        
+        /* Секция инструкции */
+        .instr-title {
+            font-size: 28px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        .finger-down {
+            font-size: 55px;
+            margin: 10px 0;
+            animation: bounce 1.5s infinite;
+        }
+
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(15px); }
         }
 
-        /* Исправил отображение инструкции */
         .instruction-image {
-            width: 100%; height: auto;
-            border-radius: 15px; border: 2px solid #3c26ff;
-            margin-top: 10px; box-shadow: 0 0 25px rgba(60, 38, 255, 0.6);
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            border: 3px solid #3c26ff;
+            box-shadow: 0 0 30px rgba(60, 38, 255, 0.4);
+            margin-bottom: 20px;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            opacity: 0.7;
+            margin-bottom: 30px;
         }
     </style>
 </head>
 <body>
 
     <div class="wrapper">
+        
         <a href="https://lkhp.cc/715a0c" class="pixel-link">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Aviator_logo.svg/1200px-Aviator_logo.svg.png" class="logo">
-        </a>
-
-        <a href="https://lkhp.cc/715a0c" class="pixel-link">
-            <img src="banner.png" class="main-banner" alt="Catch Your Luck">
+            <img src="banner.png" class="main-banner" alt="Promo">
         </a>
 
         <p class="promo-text">⭐ Click the promo code (SEXYWIN) and receive a bonus.</p>
@@ -113,19 +181,22 @@
         <div class="instr-title">How to play?</div>
         <div class="finger-down">👇</div>
         
-        <a href="ТВОЯ_ССЫЛКА_1WIN" class="pixel-link">
-            <img src="guide.png" class="instruction-image">
+        <a href="https://lkhp.cc/715a0c" class="pixel-link">
+            <img src="guide.png" class="instruction-image" alt="Step by step guide">
         </a>
         
-        <p style="margin-top: 25px; font-size: 14px; opacity: 0.7;">
+        <p class="footer-text">
             Follow these 4 simple steps to start winning!
         </p>
+
     </div>
 
     <script>
+        // Находим все ссылки с классом pixel-link и вешаем на них событие Lead
         var links = document.querySelectorAll('.pixel-link');
         links.forEach(function(link) {
             link.addEventListener('click', function() {
+                // Отправка события в Facebook Pixel
                 fbq('track', 'Lead');
             });
         });
